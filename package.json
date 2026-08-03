@@ -1,0 +1,29 @@
+{
+  "name": "voe-downloader",
+  "version": "1.0.0",
+  "description": "Download videos from voe.sx by reversing its client-side URL obfuscation and muxing the resulting HLS stream to MP4.",
+  "type": "module",
+  "bin": {
+    "voe-dl": "./bin/voe.js",
+    "filman-dl": "./bin/filman.js"
+  },
+  "main": "./src/extract.js",
+  "exports": {
+    ".": "./src/extract.js",
+    "./deobfuscate": "./src/deobfuscate.js",
+    "./embed": "./src/embed.js",
+    "./filman": "./src/filman.js",
+    "./hls": "./src/hls.js"
+  },
+  "scripts": {
+    "test": "node --test",
+    "start": "node bin/voe.js"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {},
+  "keywords": ["voe", "hls", "m3u8", "downloader", "deobfuscation"],
+  "license": "MIT",
+  "private": true
+}
